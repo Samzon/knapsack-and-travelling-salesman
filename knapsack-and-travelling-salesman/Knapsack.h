@@ -6,6 +6,8 @@ class Knapsack
 {
 private:
 	friend class KnapsackGreedy;
+	friend class KnapsackDynamicPro;
+	friend class KnapsackBruteforce;
 	struct item {
 		int value, weight, ratio;
 	};

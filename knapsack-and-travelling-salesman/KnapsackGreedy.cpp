@@ -24,7 +24,7 @@ void KnapsackGreedy::GreedyAlgorithm() {
 	knapsackContent = new Knapsack::item[0];
 	for (int i = 0; i < numberOfItems; i++) {
 		for (int j = 0; j < numberOfItems - 1; j++) {
-			if (knapsack->items[i].ratio < knapsack->items[j + 1].ratio) {
+			if (knapsack->items[j].ratio < knapsack->items[j + 1].ratio) {
 				item tmp = knapsack->items[j + 1];
 				knapsack->items[j + 1] = knapsack->items[j];
 				knapsack->items[j] = tmp;

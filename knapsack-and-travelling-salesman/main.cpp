@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Knapsack.h"
 #include "KnapsackGreedy.h"
+#include "KnapsackDynamicPro.h"
 
 int choice;
 
@@ -12,6 +13,7 @@ void KnapsackProblem() {
 	std::cin >> knapsackSize;
 	Knapsack *ks = new Knapsack(numberOfItems, knapsackSize);
 	KnapsackGreedy *ksg;
+	KnapsackDynamicPro *ksdp;
 	do {
 		std::cout
 			<< "\n__________________________________\n\n"
@@ -53,7 +55,8 @@ void KnapsackProblem() {
 			ksg->GreedyAlgorithm();
 			break;
 		case 3:
-			
+			ksdp = new KnapsackDynamicPro(ks);
+			ksdp->DynamicProgrammingAlgorithm();
 			break;
 		}
 	}
