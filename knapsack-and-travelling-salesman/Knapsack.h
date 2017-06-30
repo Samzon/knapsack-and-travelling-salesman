@@ -14,6 +14,7 @@ private:
 	int numberOfItems, knapsackSize;
 	item *items;
 public:
+	Knapsack();
 	Knapsack(int numberOfItems, int knapsackSize);
 	~Knapsack();
 	void FillItemsManually();

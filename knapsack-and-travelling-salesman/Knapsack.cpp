@@ -1,5 +1,7 @@
 #include "Knapsack.h"
 
+Knapsack::Knapsack() {}
+
 Knapsack::Knapsack(int numberOfItems, int knapsackSize)
 {
 	this->numberOfItems = numberOfItems;
