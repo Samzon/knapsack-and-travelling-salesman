@@ -9,7 +9,6 @@ Knapsack::Knapsack(int numberOfItems, int knapsackSize)
 	items = new item[numberOfItems];
 }
 
-
 Knapsack::~Knapsack()
 {
 	delete[] items;
