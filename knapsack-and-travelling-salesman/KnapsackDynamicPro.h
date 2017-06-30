@@ -1,10 +1,10 @@
 #pragma once
 #include "Knapsack.h"
 
-class KnapsackDynamicPro: public Knapsack
+class KnapsackDynamicPro: protected Knapsack
 {
-protected:
-	int **PIJ, **QIJ;
+private:
+	int **valuesArray, **weightsArray;
 	Knapsack *knapsack;
 public:
 	KnapsackDynamicPro(Knapsack *knapsack);
