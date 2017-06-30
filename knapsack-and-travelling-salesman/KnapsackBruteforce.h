@@ -1,20 +1,23 @@
 #pragma once
 #include "Knapsack.h"
 
-class KnapsackBruteforce: public Knapsack
+class KnapsackBruteforce: protected Knapsack
 {
-protected:
+private:
 	Knapsack *knapsack;
 	struct combinationStructure {
 		item **subsets;
 		unsigned long long combinationSize;
 	};
 	combinationStructure *combos;
-	int maxI, maxJ;
+	int maxI, maxJ, iterator, nOfItems, kSize;
 public:
 	KnapsackBruteforce(Knapsack *knapsack);
 	~KnapsackBruteforce();
-	int power(int number);
+	unsigned long long power(int number);
 	void BruteforceAlgorithm();
+	void GenerateCombination(int size, int step, int *arr, int combinationLength, int index);
+	void SelectBestCombination();
+	void ShowResults(int v, int w);
 };
 
