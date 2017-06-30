@@ -1,13 +1,12 @@
 #pragma once
 #include "Knapsack.h"
 
-class KnapsackGreedy: public Knapsack
+class KnapsackGreedy: protected Knapsack
 {
-protected:
+private:
 	Knapsack *knapsack;
 	item *knapsackContent;
 	int counter = 0;
-	int *ratio;
 public:
 	KnapsackGreedy(Knapsack *knapsack);
 	~KnapsackGreedy();

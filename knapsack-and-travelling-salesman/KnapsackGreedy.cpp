@@ -1,26 +1,20 @@
 #include "KnapsackGreedy.h"
 
-
-
 KnapsackGreedy::KnapsackGreedy(Knapsack *knapsack)
 {
 	this->knapsack = knapsack;
 	this->numberOfItems = knapsack->numberOfItems;
 	this->knapsackSize = knapsack->knapsackSize;
-	ratio = new int[numberOfItems];
 }
-
 
 KnapsackGreedy::~KnapsackGreedy()
 {
-	delete knapsack;
 	delete[] knapsackContent;
-	delete[] ratio;
+	delete knapsack;
+	counter = 0;
 }
 
-
 void KnapsackGreedy::GreedyAlgorithm() {
-
 	knapsackContent = new Knapsack::item[0];
 	for (int i = 0; i < numberOfItems; i++) {
 		for (int j = 0; j < numberOfItems - 1; j++) {
